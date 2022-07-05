@@ -1,0 +1,51 @@
+import { Game } from "utils/types/game.type";
+export const games: Game[] = [
+  {
+    id: "121314asf",
+    name: "game1",
+    description: "game1 description",
+    score: 10,
+    genre: "fps",
+    price: 100.5,
+  },
+  {
+    id: "121315asf",
+    name: "CSGO",
+    description: "Jogo de tiro",
+    score: 8.5,
+    genre: "fps",
+    price: 0,
+  },
+  {
+    id: "121316asf",
+    name: "Xadrez 2",
+    description: "Um novo jogo de xadrez",
+    score: 10,
+    genre: "Estratégia",
+    price: 0,
+  },
+  {
+    id: "121317asf",
+    name: "game2",
+    description: "game2 description",
+    score: 2,
+    genre: "fps",
+    price: 100.5,
+  },
+  {
+    id: "121318asf",
+    name: "Campo minado",
+    description: "Bomba",
+    score: 1,
+    genre: "sorte",
+    price: 100.5,
+  },
+  {
+    id: "121319asf",
+    name: "Terraria",
+    description: "Sobreviva",
+    score: 10,
+    genre: "Sobrevivencia",
+    price: 20,
+  },
+];

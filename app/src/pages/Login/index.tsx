@@ -1,7 +1,9 @@
-import * as S from "./style";
 
-const Login = () => {
-    return ();
-}
-
-export default Login;
+const Login = (props: any) => {
+    console.log(props)
+    return (
+      <div>Login</div>
+    )
+  }
+  
+  export default Login

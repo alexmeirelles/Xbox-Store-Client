@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.25"
   }
 }
