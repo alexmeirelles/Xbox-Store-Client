@@ -6,20 +6,24 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import "./style.css";
 import { CardsSection } from 'AppStyled';
-import { Card } from '../../components/card';
+import { Card } from '../../components/Card/card';
 
 
 
 function Home() {
 return (
+  <>
+  <nav>
+    <Header />
+  </nav>
     <main>
-    <Header/>
     <CardsSection>
       {games?.map((game) => {
         return <Card game={game} key={game.id} />;
       })}
     </CardsSection>
     </main>
+  </>
 );
 }
 

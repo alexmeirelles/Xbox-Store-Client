@@ -11,7 +11,9 @@ const Header = () => {
           <div>
             <img src={logo} alt="logo xbox" className='header-logo'/>
           </div>
-          <div>data</div>
+          <div>
+          data   
+          </div>
         </div>
     </section>
   )
