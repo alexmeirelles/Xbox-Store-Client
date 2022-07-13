@@ -2,10 +2,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #d5d5d5;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: #ffffff;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }

@@ -26,8 +26,8 @@ export const games: Game[] = [
   },
   {
     id: "121317asf",
-    name: "game2",
-    description: "game2 description",
+    name: "game4",
+    description: "game4 description",
     score: 2,
     genre: "fps",
     price: 100.5,

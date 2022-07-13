@@ -12,18 +12,18 @@ import { Card } from '../../components/Card/card';
 
 function Home() {
 return (
-  <>
-  <nav>
-    <Header />
-  </nav>
     <main>
-    <CardsSection>
-      {games?.map((game) => {
-        return <Card game={game} key={game.id} />;
-      })}
-    </CardsSection>
+      <Header />
+        <section className='list-cards'>
+          <div className='card-container'>
+            <CardsSection>
+              {games?.map((game) => {
+                return <Card game={game} key={game.id} />;
+              })}
+            </CardsSection>
+          </div>
+        </section>
     </main>
-  </>
 );
 }
 
