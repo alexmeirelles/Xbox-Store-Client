@@ -1,11 +1,14 @@
 import { Game } from "utils/types/game.type";
 import { CardStyle } from "./card.style";
 
-export function Card(props: { game: Game }) {
+export function Card(data: { game: Game }) {
   return (
     <CardStyle>
-      <h2>{props.game.name}</h2>
-      <span>{props.game.genre}</span>
+      <img src={data.image} className="" alt="" />
+      <h2>{data.name}</h2>
+      <span>{data.genre}</span>
     </CardStyle>
   );
 }
+
+

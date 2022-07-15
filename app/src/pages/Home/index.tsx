@@ -1,5 +1,3 @@
-import { games } from 'mocks/games';
-
 import Header from '../../components/Header/index';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -9,41 +7,46 @@ import { CardsSection } from 'AppStyled';
 import { Card } from '../../components/Card/card';
 
 
+interface GamesProps {
+  id: number;
+  title: string;
+  coverImageUrl: string;
+  description: string;
+  year: number;
+  imdbScore: number;
+  trailerYoutubeUrl: string;
+  gameplayYouTubeUrl: string;
+}
+
+//interface User
 
 function Home() {
+  const [games, setGames] = useState<GamesProps[]>([]);
+  
+  useEffect(() => {
+    getAllGames();
+  }, []);
+
+  const getAllGames = async () => {
+  const response = await axios.get('https://xbox-store-server-production.up.railway.app/jogos');
+  setGames(response.data.results);
+
+  }
+
 return (
     <main>
-      <Header />
+      <Header/>
         <section className='list-cards'>
           <div className='card-container'>
             <CardsSection>
-              {games?.map((game) => {
-                return <Card game={game} key={game.id} />;
-              })}
-            </CardsSection>
+              {games.map((game: any, index) => (
+              <Link to={`/login/${game.id}`} state={{id: game.id}} key={index}>
+                <Card data={game} />
+              </Link>
+            </CardsSection>)
           </div>
         </section>
     </main>
-);
+)
 }
-
 export default Home;
-
-// return (
-//     <main>
-//       <Header/>
-//       <section className='list-cards'>
-//         <div className='card-container'>
-//           {characters.map((character: any, index) => (
-//             <Link to={`/login/${character.id}`} state={{id: character.id}} key={index}>
-//               <Card data={character} />
-//             </Link>
-//           ))}
-//         </div>
-//         <button className='btn-view-more'>Ver mais</button>
-//         <button onClick={callNextPage}>next page</button>
-//         <button onClick={callPreviousPage}>previous page</button>
-//       </section>
-//     </main>
-//   )
-// }
