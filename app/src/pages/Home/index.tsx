@@ -43,7 +43,8 @@ return (
               <Link to={`/login/${game.id}`} state={{id: game.id}} key={index}>
                 <Card data={game} />
               </Link>
-            </CardsSection>)
+))}
+            </CardsSection>
           </div>
         </section>
     </main>
