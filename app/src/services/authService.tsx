@@ -2,12 +2,12 @@ import api from './Api';
 import swal from 'sweetalert';
 
 interface userLoginObj {
-  email: string;
-  senha: string;
+  name  : string;
+  password: string;
 }
 
 interface userObj {
-  email: string;
+  name: string;
   cpf: string;
   password: string;
   confirmPassword: string;
@@ -15,10 +15,11 @@ interface userObj {
 
 const loginService = {
   login: (values: userLoginObj) => 
-    api.post('/auth/login', values)
+    api.post('/auth', values)
     .then((response: any) => response)
     .catch((error: any) => console.log('ERRO NA CHAMADA:', error))
 }
+
 
 const registerService = {
   registerValues: (values: userObj) => 

@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import swall from 'sweetalert';
 
 interface userLoginObj {
-  email: string;
-  senha: string;
+  name: string;
+  password: string;
 }
 
 const Login = (props: any) => {
   const [values, setValues] = useState({
-    email: '',
-    senha: '',
+    name: '',
+    password: '',
   })
 
   let navigate = useNavigate();
@@ -41,6 +41,7 @@ const Login = (props: any) => {
       navigate('/');
     }
     console.log(response.data);
+    console.log("amigo estou aqui",values);
   }
 
   return (
@@ -48,7 +49,7 @@ const Login = (props: any) => {
       <div className="login-card">
         <h2>Entrar</h2>
         <form onSubmit={loginUser} className="form-login">
-          <input type="email" name="email" id="email" placeholder="Digite o seu Email" onChange={handleChangesValues}/>
+          <input type="text" name="name" id="name" placeholder="Digite o Usuario" onChange={handleChangesValues}/>
           <input type="password" name="password" id="password" placeholder="Digite a sua senha" onChange={handleChangesValues}/>
           <button>Entrar</button>
         </form>
