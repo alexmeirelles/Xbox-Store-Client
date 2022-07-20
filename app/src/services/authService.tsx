@@ -2,12 +2,11 @@ import api from './Api';
 import swal from 'sweetalert';
 
 interface userLoginObj {
-  nickname: string;
-  password: string;
+  email: string;
+  senha: string;
 }
 
 interface userObj {
-  nickname: string;
   email: string;
   cpf: string;
   password: string;

@@ -1,10 +1,10 @@
 export type Game = {
-  id: number;
+  id: string;
   title: string;
   coverImageUrl: string;
   description: string;
   year: number;
-  imdbScore: number;
+  score: number;
   trailerYoutubeUrl: string;
   gameplayYouTubeUrl: string;
   };

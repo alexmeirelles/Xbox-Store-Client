@@ -1,12 +1,25 @@
 import { Game } from "utils/types/game.type";
 import { CardStyle } from "./card.style";
 
-export function Card(data: { game: Game }) {
+interface CardProps { 
+  game: {
+  id: string;
+  title: string;
+  coverImageUrl: string;
+  description: string;
+  year: number;
+  imdbScore: number;
+  trailerYoutubeUrl: string;
+  gameplayYouTubeUrl: string;
+  }
+}
+
+export function Card({game}: CardProps ) {
   return (
     <CardStyle>
-      <img src={data.coverImageUrl} className="" alt="" />
-      <h2>{data.title}</h2>
-      <span>{data.genre}</span>
+      <img src={game.coverImageUrl} className="" alt="" />
+      <h2>{game.title}</h2>
+      <span>genero</span>
     </CardStyle>
   );
 }
