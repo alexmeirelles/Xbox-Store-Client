@@ -3,6 +3,8 @@ import { loginService } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import swall from 'sweetalert';
+import logo from '../../assets/images/xbox.png'
+import * as S from './style';
 
 interface userLoginObj {
   name: string;
@@ -40,22 +42,22 @@ const Login = (props: any) => {
       })
       navigate('/');
     }
-    console.log(response.data);
-    console.log("amigo estou aqui",values);
   }
 
   return (
-    <section className="login-container">
-      <div className="login-card">
-        <h2>Entrar</h2>
-        <form onSubmit={loginUser} className="form-login">
-          <input type="text" name="name" id="name" placeholder="Digite o Usuario" onChange={handleChangesValues}/>
-          <input type="password" name="password" id="password" placeholder="Digite a sua senha" onChange={handleChangesValues}/>
-          <button>Entrar</button>
-        </form>
-        <p>Não tem conta ? <Link to="/register" className='link-register'>Cadastre-se</Link></p>
-      </div>
-    </section>
+    <S.LoginContainer>
+      <S.LoginCard>
+      <img src={logo} alt="logo xbox" width="120" height="120"/>
+      <S.RegisterForm onSubmit={loginUser}>
+          <S.InputCreate type="text" name="name" id="name" placeholder="user" onChange={handleChangesValues}/>
+          <S.InputCreate type="password" name="password" id="password" placeholder="****" onChange={handleChangesValues}/>
+          <S.ButtonCreate>
+            login
+          </S.ButtonCreate>
+      </S.RegisterForm>
+        <p><Link to="/register" className='link-register'> or register </Link></p>
+        </S.LoginCard>
+      </S.LoginContainer>
   )
 }
 

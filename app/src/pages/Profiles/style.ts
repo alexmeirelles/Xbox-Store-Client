@@ -24,7 +24,6 @@ export const ProfileSection = styled.section`
         align-items: center;
         position: absolute;
         z-index: 999;
-        flex-wrap: wrap;
 
 
     div { 
@@ -41,13 +40,14 @@ export const ProfileSection = styled.section`
             width: 120px;
             height: 120px;
             border-radius: 50%;     
-            transform : all 1s smooth; ;
+            transform : all 1s smooth;
         }
         img:hover{
             width: 10rem;
             height: 10rem;
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
-            transition: ease-in 1.5s;
+            transition: ease-in 0.3s;
+            cursor: pointer;
         }
     }
     
@@ -56,20 +56,34 @@ export const ProfileSection = styled.section`
         font-size: 2rem;
     }
     button{
-        background-color: lightgreen;
+        
         size: 2rem;
-        border-radius: 1.5rem;
+        border: none;
         text-align: center;
     }
     button:hover{
-        background-color: darkgreen ;
+        border-radius: 50%;
         box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        transition: ease-in 0.5s;
+        cursor: pointer;
 
     }
 `;
 
 export const XboxFooter = styled.div` 
-        justify-content: flex-end;
-        align-items: flex-end;
-
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        height: 10vh;
+        border: border-box;
+        background: whitesmoke;
+        padding: 2rem;
+        font-size: 1.5rem;
+        color: lightgray;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        bottom: 0;
 `;

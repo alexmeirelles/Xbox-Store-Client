@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import * as S from './style'
-import { BiEdit } from 'react-icons/bi'
+import { TbEditCircle } from 'react-icons/tb'
 import { Profile } from '../../utils/types/profiletypes'
 import { User } from '../../utils/types/usertypes'
 import { useNavigate } from 'react-router-dom'
@@ -12,7 +12,7 @@ const Profiles = () => {
   const [ profile, setProfile ] = useState<Profile[]>([]);
   const [ userLogged, setUserLogged ] = useState<User[]>([]);
 
-  const editIcon = <BiEdit size={20} />
+  const editIcon = <TbEditCircle size={25} />
   return (
     <S.ProfileMain>
       <S.ProfileSection>
@@ -32,15 +32,14 @@ const Profiles = () => {
           <button>{editIcon}</button>
         </div>
         <div>
-          <img src="https://avatars.githubusercontent.com/u/83729692?v=4" alt="" />
+          <img src="https://avatars.githubusercontent.com/u/96138394?v=4" alt="" />
           <p>Profile 4</p>
           <button>{editIcon}</button>
         </div>
       </S.ProfileSection>
       <S.XboxFooter>
-      <div>
         <img src={logo} alt="logo xbox" className='header-logo'/>
-      </div>
+      <p>XBOX LITE</p>
     </S.XboxFooter>
     </S.ProfileMain>
 
