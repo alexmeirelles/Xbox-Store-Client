@@ -55,7 +55,9 @@ const Login = (props: any) => {
             login
           </S.ButtonCreate>
       </S.RegisterForm>
-        <p><Link to="/register" className='link-register'> or register </Link></p>
+        <S.LinkRegister>
+          <p><Link to="/register?" className='link-register'> or register </Link></p>
+        </S.LinkRegister>
         </S.LoginCard>
       </S.LoginContainer>
   )

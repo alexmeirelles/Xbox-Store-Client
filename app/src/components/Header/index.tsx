@@ -2,8 +2,17 @@ import logo from '../../assets/images/xbox.png'
 import profile from '../../assets/images/profile.png'
 import './style.css'
 import { CgArrowLeftR } from 'react-icons/cg'
+import { DateTime } from "luxon";
+
+
+
 
 const Header = () => {
+  
+  const dateDescription = DateTime.now().toLocaleString({
+    ...DateTime.TIME_24_SIMPLE,
+  });
+
   return (
     <header>
     <section className='head'>
@@ -31,7 +40,7 @@ const Header = () => {
             <img src={logo} alt="logo xbox" className='header-logo'/>
           </div>
           <div>
-            23:58  
+          {dateDescription}  
           </div>
         </div>
     </section>

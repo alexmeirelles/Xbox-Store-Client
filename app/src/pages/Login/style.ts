@@ -66,3 +66,12 @@ export const ButtonCreate = styled.button`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     `;
+
+export const LinkRegister = styled.div`
+${({theme}) => css`
+    font-size: 1rem;
+    color: #c2c2c2;
+    font-weight: bold;
+    margin-top: 0;
+    text-decoration-style: none;
+    `}`
