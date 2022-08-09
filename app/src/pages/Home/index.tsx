@@ -1,25 +1,39 @@
 import Header from '../../components/Header/index';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import "./style.css";
-import { CardsSection } from 'AppStyled';
-import { Card } from '../../components/Card/card';
-import swall from 'sweetalert';
-import { useNavigate } from 'react-router-dom';
-import { findAll } from '../../services/gameService';
+import "./style.ts";
 import ListGames from 'components/ListGames';
+import { mockedCategories } from "../../mocks";
+import { Dispatch, SetStateAction, useState } from "react";
 
 
 
 //interface User
 
 function Home() {
-return (
+  const [selectedCategory, setSelectedCategory] = useState<Category>(
+    mockedCategories[0]
+  );
+
+  const filteredProducts: Product[] = mockedProducts.filter(
+    (element) => element.categoryId === selectedCategory.id
+  );
+
+  return (
     <main>
       <Header/>
       <ListGames/>
-      
+      <S.CategoriesNavigationBar>
+            {mockedCategories.map((element) => {
+              return (
+                <S.CategoriesNavigationButton
+                  active={element.name === selectedCategory.name}
+                  onClick={() => setSelectedCategory(element)}
+                >
+                  {element.name}
+                </S.CategoriesNavigationButton>
+              );
+            })}
+          </S.CategoriesNavigationBar>
+          <ListGames list={filteredProducts} />
     </main>
 )
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
-import "./style.css";
+import "./style.ts";
 import { CardsSection } from 'AppStyled';
 import { Card } from '../../components/Card/card';
 import swall from 'sweetalert';
@@ -82,11 +81,19 @@ return (
       <section className='list-cards'>
           <div className='card-container'>
             <CardsSection>
-              {games?.map((game: any, index) => (
-              <Link to={`/login/${game.id}`} state={{id: game.id}} key={index}>
-                <Card game={game} />
-              </Link>
-))}
+            <S.CategoriesNavigationBar>
+            {mockedCategories.map((element) => {
+              return (
+                <S.CategoriesNavigationButton
+                  active={element.name === selectedCategory.name}
+                  onClick={() => setSelectedCategory(element)}
+                >
+                  {element.name}
+                </S.CategoriesNavigationButton>
+              );
+            })}
+          </S.CategoriesNavigationBar>
+          <ListGames list={filteredProducts} />
             </CardsSection>
             </div>
         </section>

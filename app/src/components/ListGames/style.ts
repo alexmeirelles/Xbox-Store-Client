@@ -1,12 +1,6 @@
-/* main {
-    margin-top: 10em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+import styled, {css} from "styled-components";
 
-} */
-
+export const LoginContainer = styled.section`
 main {
     width: 100%;
     height: 100vh;
