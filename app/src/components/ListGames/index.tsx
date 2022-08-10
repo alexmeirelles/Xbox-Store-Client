@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import "./style.ts";
+import * as S from "./style";
 import { CardsSection } from 'AppStyled';
 import { Card } from '../../components/Card/card';
 import swall from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import { findAll } from '../../services/gameService';
+import { mockedCategories, mockedGames } from "../../mocks";
+import { useEffect, SetStateAction, useState } from "react";
+import { Category, Game } from '../../utils/types/index';
 
 
 interface GamesProps {
@@ -21,7 +23,19 @@ interface GamesProps {
 
 //interface User
 
+interface ProductsListProps {
+  list: Game[];
+}
+
 function ListGames() {
+  const [selectedCategory, setSelectedCategory] = useState<Category>(
+    mockedCategories[0]
+  );
+
+  const filteredGames: Game[] = mockedGames.filter(
+    (element) => element.genreId === selectedCategory.id
+  );
+  
   const navigate = useNavigate();
   const [games, setGames] = useState<GamesProps[]>([]);
   
@@ -81,7 +95,7 @@ return (
       <section className='list-cards'>
           <div className='card-container'>
             <CardsSection>
-            <S.CategoriesNavigationBar>
+            
             {mockedCategories.map((element) => {
               return (
                 <S.CategoriesNavigationButton
@@ -92,8 +106,7 @@ return (
                 </S.CategoriesNavigationButton>
               );
             })}
-          </S.CategoriesNavigationBar>
-          <ListGames list={filteredProducts} />
+          <ListGames list={filteredGames} />
             </CardsSection>
             </div>
         </section>

@@ -1,53 +1,61 @@
-import * as T from "../utils/types";
+import * as T from "../utils/types/index";
 import burguerCarneEFrango from "../assets/images/burguer-carne-e-frango.png";
 import burguerDuploRanch from "../assets/images/burguer-duplo-ranch.png";
-import burguerSaladaQueijo from "../assets/images/burguer-salada-queijo.png";
-import burguerSalada from "../assets/images/burguer-salada.png";
+import alien from "../assets/images/burguer-salada-queijo.png";
+import halo from "../assets/images/halo.webp";
 
-export const mockedProducts: T.Product[] = [
+export const mockedGames: T.Game[] = [
   {
     id: "3df26203-5a36-402b-ac7d-437339db15bf",
-    name: "Burguer Salada",
+    title: "Halo",
     description:
-      "Hamburguer com uma carne bovina de 180g, queijo, salada e molho especial.",
-    price: 17.99,
-    image: burguerSalada,
-    categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+      "Porra do jogo do Halo",
+    coverImageUrl: halo,
+    year: 2001,
+    score: 100,
+    trailerYoutubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    gameplayYouTubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    genreId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
+
   },
   {
     id: "10c6c5d1-24eb-436d-a21a-0c9b8516f9fa",
-    name: "Burguer Salada e Queijo Especial",
+    title: "Alien",
     description:
-      "Hamburguer com uma carne bovina de 180g, queijo especial artesanal, salada e molho.",
-    price: 22.99,
-    image: burguerSaladaQueijo,
-    categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+      "Jogo de medo do Alien",
+    coverImageUrl: alien,
+    year: 2001,
+    score: 100,
+    trailerYoutubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    gameplayYouTubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    genreId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
+
   },
   {
     id: "b201ee19-c00d-4e2a-bdf0-f4101348f1b5",
-    name: "Burguer Carne e Frango",
+    title: "Burguer Carne e Frango",
     description:
       "Hamburguer com duas carnes, um bife bovino de 180g e duas peças de peito de frango.",
-    price: 28.99,
-    image: burguerCarneEFrango,
-    categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    coverImageUrl: burguerCarneEFrango,
+    year: 2001,
+    score: 100,
+    trailerYoutubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    gameplayYouTubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    genreId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
+
   },
   {
     id: "ef550853-9fb4-4b97-8e88-843c2f827ee4",
-    name: "Burguer Duplo Ranch",
+    title: "Burguer Duplo Ranch",
     description:
       "Hamburguer com duas carnes bovinas de 180g e molho especial tipo Ranch.",
-    price: 28.99,
-    image: burguerDuploRanch,
-    categoryId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    coverImageUrl: burguerDuploRanch,
+    year: 2001,
+    score: 100,
+    trailerYoutubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    gameplayYouTubeUrl: "https://www.youtube.com/watch?v=2g811Eo7K8U",
+    genreId: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
+
   },
 ];
 
@@ -55,20 +63,17 @@ export const mockedCategories: T.Category[] = [
   {
     id: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     name: "AVENTURA",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+
   },
   {
     id: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
     name: "TIRO",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+
   },
   {
     id: "1c86eac1-f2b9-4bdf-8dc9-21bcd789da4f",
     name: "RPG",
-    createdAt: new Date(),
-    updatedAt: new Date(),
+
   },
 ];
 
