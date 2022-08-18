@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import * as S from './style'
 import { TbEditCircle } from 'react-icons/tb'
-import { Profile } from '../../utils/types/profiletypes'
-import { User } from '../../utils/types/usertypes'
+import { Profile } from '../../utils/types/index'
+import { User } from '../../utils/types/index'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/xbox.png'
 

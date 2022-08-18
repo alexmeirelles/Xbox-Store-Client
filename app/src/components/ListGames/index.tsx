@@ -53,7 +53,7 @@ const getAll = async () => {
       icon: "error",
       timer: 7000,
     });
-    navigate("/");
+    navigate("/login");
   } else {
     const response = await findAll.allGames();
     if(response.status === 204){
