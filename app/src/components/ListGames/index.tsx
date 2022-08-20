@@ -106,7 +106,7 @@ return (
                 </S.CategoriesNavigationButton>
               );
             })}
-          <ListGames list={filteredGames} />
+          {/* <ListGames list={filteredGames} /> */}
             </CardsSection>
             </div>
         </section>
