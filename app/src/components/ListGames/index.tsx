@@ -53,7 +53,7 @@ const getAll = async () => {
       icon: "error",
       timer: 7000,
     });
-    navigate("/login");
+    navigate("/");
   } else {
     const response = await findAll.allGames();
     if(response.status === 204){
@@ -89,14 +89,8 @@ return (
         </section>
         <div className='divider'> {/*container*/}
       <div className='line-left'><hr color="lightgray"/></div>
-      <div><p>ALL</p></div>
-      <div className='line-right'><hr color="lightgray"/></div>
-      </div>
-      <section className='list-cards'>
-          <div className='card-container'>
-            <CardsSection>
-            
-            {mockedCategories.map((element) => {
+      <div><p>
+        {mockedCategories.map((element) => {
               return (
                 <S.CategoriesNavigationButton
                   active={element.name === selectedCategory.name}
@@ -106,6 +100,14 @@ return (
                 </S.CategoriesNavigationButton>
               );
             })}
+        </p>
+        </div>
+      <div className='line-right'><hr color="lightgray"/></div>
+      </div>
+      <section className='list-cards'>
+          <div className='card-container'>
+            
+            <CardsSection>          
           {/* <ListGames list={filteredGames} /> */}
             </CardsSection>
             </div>
