@@ -6,17 +6,17 @@ const index = () => {
   return (
     <S.RegisterContent>
         <S.Title> 
-          criar user
+          create user
         </S.Title>
       <S.RegisterBox>
         <S.RegisterForm>
-          <S.InputCreate type="text" placeholder="Nome" />
+          <S.InputCreate type="text" placeholder="Name" />
           <S.InputCreate type="text" placeholder="Email" />
           <S.InputCreate type="number" placeholder="CPF" />
-          <S.InputCreate type="password" placeholder="Senha" />
-          <S.InputCreate type="password" placeholder="Confirmar Senha" />
+          <S.InputCreate type="password" placeholder="Password" />
+          <S.InputCreate type="password" placeholder="Confirm Password" />
           <S.ButtonCreate>
-            Criar
+            Create
           </S.ButtonCreate>
         </S.RegisterForm>
       </S.RegisterBox>

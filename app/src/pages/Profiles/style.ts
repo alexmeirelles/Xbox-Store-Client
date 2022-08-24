@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 
 export const ProfileMain = styled.main` 
@@ -11,19 +11,25 @@ export const ProfileMain = styled.main`
         align-items: center;
 `;
 
+export const Title = styled.h1`
+    ${({theme}) => css`
+    font-size: 2rem;
+    color: #c2c2c2;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    
+    `}`
+
 export const ProfileSection = styled.section`
         width: 78%;
         height: 50vh;
         border: border-box;
         opacity: 0.8;
         border-radius: 2rem;
-        
         border: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        z-index: 999;
 
 
     div { 

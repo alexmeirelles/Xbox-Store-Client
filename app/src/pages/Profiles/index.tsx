@@ -14,7 +14,11 @@ const Profiles = () => {
 
   const editIcon = <TbEditCircle size={25} />
   return (
+ 
     <S.ProfileMain>
+    <S.Title> 
+          create profile
+        </S.Title>
       <S.ProfileSection>
         <div>
           <img src="https://avatars.githubusercontent.com/u/96752298?v=4" alt="" />
@@ -42,7 +46,6 @@ const Profiles = () => {
       <p>XBOX LITE</p>
     </S.XboxFooter>
     </S.ProfileMain>
-
 
   )
 }

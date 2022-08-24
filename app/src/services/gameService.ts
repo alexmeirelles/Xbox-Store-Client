@@ -7,10 +7,14 @@ export const findAll = {
         return response;
     }).catch(
         (error: any) => {
-            console.log(error);
-        }
-    )
-}
+          swal({
+            title: "Erro!",
+            text: `${error.message}`,
+            icon: "error",
+            timer: 7000,
+          })
+        })
+    }
 
 const createService = {
     createGame: (values: object) =>

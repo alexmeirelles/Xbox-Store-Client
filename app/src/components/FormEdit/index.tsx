@@ -10,7 +10,7 @@ const FormEdit = () => {
       <S.EditLeft>
         <S.FormEdit>
         <S.FormEditTitle>
-        Editar Jogo
+        Edit Game
       </S.FormEditTitle>
       <S.InputCreate type='text' name='title' placeholder=' nome ' />
       <S.InputCreate type='text' name='coverImageUrl' placeholder='Imagem Url' />
@@ -22,8 +22,8 @@ const FormEdit = () => {
       <S.InputCreate type='text' name='genreName' placeholder='Gênero' />
 
 
-      <S.ButtonCreate>atualizar</S.ButtonCreate>
-      <S.ButtonCreate>apagar</S.ButtonCreate>
+      <S.ButtonCreate>update</S.ButtonCreate>
+      <S.ButtonCreate>delete</S.ButtonCreate>
 
       </S.FormEdit>
     </S.EditLeft>
@@ -32,22 +32,22 @@ const FormEdit = () => {
     <S.EditRight>
     <S.FormEdit>
     <S.FormEditTitle>
-        Inserir Gênero
+        Insert Genre
       </S.FormEditTitle>
 
       <S.InputCreate type='text' name='genre' placeholder='Gênero' />     
-      <S.ButtonCreate>inserir</S.ButtonCreate>
+      <S.ButtonCreate>insert</S.ButtonCreate>
 
     </S.FormEdit>
 
     <S.FormEdit>
     <S.FormEditTitle>
-      Atualizar Gênero
+      Update Genre
     </S.FormEditTitle>
 
     <S.InputCreate type='text' name='genre' placeholder='Gênero' />
     
-    <S.ButtonCreate>atualizar</S.ButtonCreate>
+    <S.ButtonCreate>update</S.ButtonCreate>
     </S.FormEdit>
       </S.EditRight>
 
