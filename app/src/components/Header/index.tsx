@@ -34,9 +34,6 @@ const Header = () => {
             create  
           </div>
           <div>
-            edit          
-          </div>
-          <div>
             <img src={logo} alt="logo xbox" className='header-logo'/>
           </div>
           <div>

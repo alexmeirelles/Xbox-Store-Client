@@ -38,3 +38,10 @@ export type Game = {
     games?: string;
     favoritos?: string;
 }
+
+export interface Genre {
+  id?: string;
+  genre: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+}

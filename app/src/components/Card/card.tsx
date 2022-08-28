@@ -16,11 +16,13 @@ interface CardProps {
 
 export function Card({game}: CardProps ) {
   return (
+    
     <CardStyle>
       <img src={game.coverImageUrl} className="" alt="" />
       <h2>{game.title}</h2>
       <span>genero</span>
     </CardStyle>
+    
   );
 }
 

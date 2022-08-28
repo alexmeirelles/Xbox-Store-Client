@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardStyle = styled.section`
   width: 30%;
-  height: auto;
+  height: 10em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11,6 +11,16 @@ export const CardStyle = styled.section`
   margin-bottom: 3rem;
   cursor: pointer;
   transition: .4s all;
+  img {
+    width: 12rem;
+    height: 16rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 1.2rem;
+  }
 `;
 
 
