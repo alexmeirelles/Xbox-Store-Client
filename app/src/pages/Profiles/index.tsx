@@ -1,45 +1,30 @@
-import React, { useState, useEffect } from 'react'
 import * as S from './style'
-import { TbEditCircle } from 'react-icons/tb'
-import { Profile } from '../../utils/types/index'
-import { User } from '../../utils/types/index'
 import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/xbox.png'
+import { useProfiles } from "contexts/profiles";
 
 const Profiles = () => {
-  const navigate = useNavigate();
 
-  const [ profile, setProfile ] = useState<Profile[]>([]);
-  const [ userLogged, setUserLogged ] = useState<User[]>([]);
-
-  const editIcon = <TbEditCircle size={25} />
+  
+  const { profiles } = useProfiles();
+  let Navigate = useNavigate();
+  function goToAdminHome() {
+  Navigate("/");
+  }
+  
   return (
- 
     <S.ProfileMain>
     <S.Title> 
           create profile
         </S.Title>
       <S.ProfileSection>
+      {profiles.map((element) => (
         <div>
-          <img src="https://avatars.githubusercontent.com/u/96752298?v=4" alt="" />
-          <p>Profile 1</p>
-          <button>{editIcon}</button>
+        <img src={element.imageURL} alt='user' onClick={goToAdminHome}/>
+        <h2>{element.name}</h2> 
         </div>
-        <div>
-          <img src="https://avatars.githubusercontent.com/u/83729692?v=4" alt="" />
-          <p>Profile 2</p>
-          <button>{editIcon}</button>
-        </div>
-        <div>
-          <img src="https://avatars.githubusercontent.com/u/97460632?v=4" alt="" />
-          <p>Profile 3</p>
-          <button>{editIcon}</button>
-        </div>
-        <div>
-          <img src="https://avatars.githubusercontent.com/u/96138394?v=4" alt="" />
-          <p>Profile 4</p>
-          <button>{editIcon}</button>
-        </div>
+        ))}
+        
       </S.ProfileSection>
       <S.XboxFooter>
         <img src={logo} alt="logo xbox" className='header-logo'/>

@@ -10,7 +10,7 @@ interface userObj {
     password: string;
     confirmPassword: string;
     cpf: string;
-    image: string;
+    image?: string;
 }
 
 const userService = {
