@@ -19,8 +19,8 @@ const Router = () => {
         <Route path="/profiles" element={<Profiles />}></Route>
         <Route path="/formedit" element={<FormEdit />}></Route>
         <Route path="/settings/games" element={<GameSettings/>} />
-        <Route path="/settings/genre" element={<GenreSettings/>} />
-        <Route path="/settings/profile" element={<ProfileSettings/>} />
+        <Route path="/settings/genres" element={<GenreSettings/>} />
+        <Route path="/settings/profiles" element={<ProfileSettings/>} />
         <Route path="/gamedetails/:gameid" element={<GameDetails />} />
       </Routes>
     

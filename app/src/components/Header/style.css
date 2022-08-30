@@ -56,3 +56,7 @@
     border-radius: 50%;
     margin-right: 0.5em;
 }
+
+.linksettings {
+    cursor: pointer;
+}

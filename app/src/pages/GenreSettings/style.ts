@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import background from "assets/images/background2.png"
 
 interface ActiveButtonProps {
 	active?: boolean;
@@ -6,6 +7,7 @@ interface ActiveButtonProps {
 
 export const SettingsContainer = styled.div`
 	${({ theme }) => css`
+		background-image: url(${background}); 
 		image
 		min-width: 100vw;
 		min-height: 100vh;

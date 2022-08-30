@@ -20,7 +20,7 @@ export const SettingsNavigationContainer = styled.div`
 		margin-top: 3rem;
 		height: 90vh;
 		padding: 1.5rem;
-		background-color: #262626; 
+		background-color: #d4d2d2; 
 		box-sizing: border-box;
 		border-radius: 8px;
 	`}
@@ -54,7 +54,7 @@ export const SettingsNavigationButtonsContainer = styled.div<ActiveButtonProps>`
 		}
 		${active &&
     css`
-      background-color: ${theme.colors.primaryColorOpacity};
+      background-color: whitesmoke;
     `}
 	`}
 `;

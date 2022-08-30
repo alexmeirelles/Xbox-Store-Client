@@ -3,6 +3,7 @@ import profile from '../../assets/images/profile.png'
 import './style.css'
 import { CgArrowLeftR } from 'react-icons/cg'
 import { DateTime } from "luxon";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +14,11 @@ const Header = () => {
     ...DateTime.TIME_24_SIMPLE,
   });
 
+  
+    let Navigate = useNavigate();
+    function goToSettings() {
+    Navigate("/settings/games");
+  }
   return (
     <header>
     <section className='head'>
@@ -30,8 +36,8 @@ const Header = () => {
         </div>
       </div>
         <div className='boxright'>      
-          <div>
-            create  
+          <div className='linksettings'>
+            <p onClick={goToSettings}>settings</p>
           </div>
           <div>
             <img src={logo} alt="logo xbox" className='header-logo'/>
