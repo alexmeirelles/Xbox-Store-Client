@@ -4,7 +4,7 @@ export type Game = {
     coverImageUrl: string;
     description: string;
     year: number;
-    score: number;
+    imdbScore: number;
     trailerYoutubeUrl: string;
     gameplayYouTubeUrl: string;
     genreId: string;
@@ -25,8 +25,8 @@ export type Game = {
   
   export interface Favorite {
     id?: string;
-    userId: string;
-    productName: string;
+    profileId: string;
+    gameName: string;
     favoritedAt?: Date;
   }
 

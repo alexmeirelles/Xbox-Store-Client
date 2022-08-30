@@ -23,6 +23,19 @@ export const CardStyle = styled.section`
   }
 `;
 
+export const ButtonCreate = styled.button`
+    width: 70%;
+    height: 3rem;
+    border-radius: 2px;
+    border: none;
+    background-color: #90df5e;
+    color: white;
+    font-size: 1.5em;
+    margin: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    `;
+
 
 
 //   height: 70%;
