@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -9,22 +9,22 @@ import GameSettings from "pages/GameSettings";
 import GenreSettings from "pages/GenreSettings";
 import GameDetails from "pages/GameDetails";
 
-const AppRoutes = () => {
+const Router = () => {
   return (
-    <Router>
+    
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/login/" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/profiles" element={<Profiles />}></Route>
         <Route path="/formedit" element={<FormEdit />}></Route>
-        <Route path="/gamesettings" element={<GameSettings/>} />
-        <Route path="/genresettings" element={<GenreSettings/>} />
-        <Route path="/profilesettings" element={<ProfileSettings/>} />
-        <Route path="/gamedetails" element={<GameDetails />} />
+        <Route path="/settings/games" element={<GameSettings/>} />
+        <Route path="/settings/genre" element={<GenreSettings/>} />
+        <Route path="/settings/profile" element={<ProfileSettings/>} />
+        <Route path="/gamedetails/:gameid" element={<GameDetails />} />
       </Routes>
-    </Router>
+    
   )
 }
 
-export default AppRoutes;
+export default Router
