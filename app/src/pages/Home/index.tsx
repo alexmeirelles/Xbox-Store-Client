@@ -9,8 +9,6 @@ import { useGames } from "contexts/games";
 import { useGenres } from "contexts/genres";
 
 
-
-
 const Home = () => {
   const { games } = useGames();
   const { genres } = useGenres();

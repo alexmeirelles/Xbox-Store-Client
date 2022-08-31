@@ -23,14 +23,14 @@ const loginService = {
 
 const registerService = {
   registerValues: (values: userObj) => 
-    api.post('/user/create', values)
+    api.post('/usuarios/create', values)
     .then((response: any) => response)
     .catch((error: any) => error.response)
 }
 
 const userLoggedService = {
   userLogged: () =>
-    api.get('/user/findById')
+    api.get('/usuarios/findById')
     .then((response:any) => response)
     .then((response: any) => response)
     .catch((error: any) => {

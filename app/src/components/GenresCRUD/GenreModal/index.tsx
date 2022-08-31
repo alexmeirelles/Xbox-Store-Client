@@ -46,7 +46,7 @@ const GenreModal = ({handleOpenModal, genre, setGenre}: GenreModalProps  ) => {
 
   const handleNewGenre = (data: GenreData) => {
     api
-    .post(`/genre`, data, headers)
+    .post(`/generos`, data, headers)
     .then(() => {
       toast.success("Genre added succesfully!");
       handleGetGenres();
@@ -57,7 +57,7 @@ const GenreModal = ({handleOpenModal, genre, setGenre}: GenreModalProps  ) => {
 
   const handleUpdateGenre = (data: GenreData) => {
     api
-    .patch(`/genre/${genre?.id}`, data, headers)
+    .patch(`/generos/${genre?.id}`, data, headers)
     .then(() => {
       toast.success("Genre updated succesfully!");
       handleGetGenres();

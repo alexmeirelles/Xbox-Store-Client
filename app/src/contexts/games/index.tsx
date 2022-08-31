@@ -32,7 +32,7 @@ import {
           Authorization: `Bearer ${token}`,
         },
       };
-      api.get("/game", headers).then((res) => {
+      api.get("/jogos", headers).then((res) => {
         setGame(res.data);
         console.log(res);
       })

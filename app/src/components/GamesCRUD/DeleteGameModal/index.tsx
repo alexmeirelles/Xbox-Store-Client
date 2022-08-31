@@ -28,7 +28,7 @@ const DeleteGameModal = ({
       },
     };
 
-    api.delete(`/game/${gameId}`, headers).then(() => {
+    api.delete(`/jogos/${gameId}`, headers).then(() => {
       handleGetGames();
       setGame(undefined);
       handleOpenDeleteModal();

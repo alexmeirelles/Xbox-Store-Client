@@ -1,18 +1,17 @@
 import logo from '../../assets/images/xbox.png'
-import profile from '../../assets/images/profile.png'
 import './style.css'
 import { CgArrowLeftR } from 'react-icons/cg'
 import { DateTime } from "luxon";
 import { useNavigate } from 'react-router-dom';
 
 
-
-
 const Header = () => {
-  
+  const profile = JSON.parse(localStorage.getItem('profile') || "");
+
   const dateDescription = DateTime.now().toLocaleString({
     ...DateTime.TIME_24_SIMPLE,
   });
+
 
   
     let Navigate = useNavigate();
@@ -25,14 +24,14 @@ const Header = () => {
       <div className='boxleft'>
         <div>
           <h3>
-            username
+          {profile.title}
           </h3>
           <div>
-          <CgArrowLeftR />
+          <CgArrowLeftR onClick={()=> Navigate("/profiles")}/>
           </div>
         </div>
         <div className='fotouser'>
-            <img src={profile} alt="profile" className='profilepic' />
+            <img src={profile.imageURL} alt="profile" className='profilepic' />
         </div>
       </div>
         <div className='boxright'>      

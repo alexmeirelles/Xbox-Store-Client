@@ -32,7 +32,7 @@ import {
           Authorization: `Bearer ${token}`,
         },
       };
-      api.get("/genre", headers).then((res) => {
+      api.get("/generos", headers).then((res) => {
         setGenre(res.data);
         console.log(res);
       }

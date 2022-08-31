@@ -58,7 +58,7 @@ import {
       };
   
       api
-        .get(`/users/${user.id}`, headers)
+        .get(`/usuarios/${user.id}`, headers)
         .then(() => {
           setLogged(true);
           navigate("/");

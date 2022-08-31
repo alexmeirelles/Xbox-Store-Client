@@ -89,7 +89,7 @@ const GameModal = ({handleOpenModal, game, setGame}: GameModalProps  ) => {
   const handleNewGame = (data: GameData) => {
     data.genreId = genreName;
     api
-    .post(`/game`, data, headers)
+    .post(`/jogos`, data, headers)
     .then(() => {
       toast.success("Game added succesfully!");
       handleGetGames();
@@ -102,7 +102,7 @@ const GameModal = ({handleOpenModal, game, setGame}: GameModalProps  ) => {
   const handleUpdateGame = (data: GameData) => {
     data.genreId = genreName;
     api.
-    patch(`/game/${game?.id}`, data, headers)
+    patch(`/jogos/${game?.id}`, data, headers)
     .then(() => {
       toast.success("Game updated succesfully!");
       handleGetGames();

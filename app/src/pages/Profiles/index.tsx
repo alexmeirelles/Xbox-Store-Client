@@ -11,20 +11,19 @@ const Profiles = () => {
   function goToAdminHome() {
   Navigate("/");
   }
-  
+
   return (
     <S.ProfileMain>
     <S.Title> 
-          create profile
+          profiles
         </S.Title>
       <S.ProfileSection>
       {profiles.map((element) => (
-        <div>
+        <div key={element.name}>
         <img src={element.imageURL} alt='user' onClick={goToAdminHome}/>
         <h2>{element.name}</h2> 
         </div>
         ))}
-        
       </S.ProfileSection>
       <S.XboxFooter>
         <img src={logo} alt="logo xbox" className='header-logo'/>

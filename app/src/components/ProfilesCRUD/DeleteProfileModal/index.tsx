@@ -28,7 +28,7 @@ const DeleteProfileModal = ({
       },
     };
 
-    api.delete(`/profile/${profileId}`, headers).then(() => {
+    api.delete(`/perfis/${profileId}`, headers).then(() => {
       handleGetProfiles();
       setProfile(undefined);
       handleOpenDeleteModal();

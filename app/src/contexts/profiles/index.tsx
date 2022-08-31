@@ -32,7 +32,7 @@ import {
           Authorization: `Bearer ${token}`,
         },
       };
-      api.get("/profile", headers).then((res) => {
+      api.get("/perfis", headers).then((res) => {
         setProfile(res.data);
         console.log(res);
       }
